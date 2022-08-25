@@ -1,32 +1,41 @@
-/* import two fonts you like here or in the html */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Silkscreen&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    /* how to center the main`? */
-    background-color: lightblue;
-    /* use a font on your page */
+  /* how to center the main`? */
+  background-color: lightblue;
+  display: grid;
+  place-items: center;
+
+  /* use a font on your page */
 }
 main.container {
-    width: 60vh;
-    height: 80vh;
-    padding: 30px;
-    background-color: white;
-    font-size: 2em;
-    color: hsl(0, 0%, 49%);
-    /* how to arrange children? */
+  width: 60vh;
+  height: 80vh;
+  padding: 30px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2em;
+  color: hsl(0, 0%, 49%);
+  /* how to arrange children? */
 }
 
 .shadow {
-    background-color: aqua;
-    width: 40%;
-    height: 40%;
-    /* how to center the text`? */
+  background-color: aqua;
+  width: 40%;
+  height: 40%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
 
-    /* add cursor pointer here or in each child? */
+  /* add cursor pointer here or in each child? */
 }
 
 /* first try to make similar shadows,then make shadows that you like */
@@ -35,17 +44,23 @@ main.container {
 
 /* you can use :nth-child() instead of id if you want */
 #one {
-    /* use another font on a spesific element */
+    box-shadow: 5px 5px 6px 6px;
+    
+    font-family: Silkscreen;
+
+  /* use another font on a spesific element */
 }
 
-#two {
+#two:hover{
+    box-shadow: 5px -5px 10px hsl(0, 0%, 36%)
 }
 /* add text shadow and then text elevation effect with transform scale` */
-#tow h4{
-
+#tow h4 {transform:scale(1.3);
+text-shadow: 5px 5px 5px rgb(56,56,56);
 }
-#three {
+#three {  box-shadow: 5px -5px 10px hsl(237, 100%, 30%),
+    5px -5px 20px hsl(237, 100%, 60%), 5px -5px 30px hsl(237, 100%, 80%)
 }
 
-#four {
+#four {box-shadow: inset 5px -5px 10px 10px hsl(0, 0%, 36%);
 }
